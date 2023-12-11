@@ -9,11 +9,11 @@
 
 
         body {
-            font-family: 'Inconsolata', sans-serif;
+            font-family:'Copperplate Gothic';
             font-style: normal;
             font-weight: 200;
             margin: 0px;
-            background: linear-gradient(#c8daea, #dae7f1);
+            background: linear-gradient(#ffffff, #424242);
         }
 
 
@@ -32,7 +32,7 @@
             padding: 15px;
             text-align: center;
             border: 2px white solid;
-            border-radius: 3px;
+            border-radius: 20px;
         }
 
         .button-custom {
@@ -49,15 +49,15 @@
             border: none;
             color: black;
             background-color: white;
-            box-shadow: steelblue 0 0px 0px 2px inset;
-            font-family: 'Inconsolata', sans-serif;
+            box-shadow: rgba(45, 46, 46, 0.721) 0 0px 0px 2px inset;
+            font-family: 'Copperplate Gothic';
             font-style: normal;
             font-size: 1.3em;
         }
 
         .button-custom:hover {
             color: white;
-            box-shadow: steelblue 0 80px 0px 2px inset;
+            box-shadow: rgba(45, 46, 46, 0.721) 0 80px 0px 2px inset;
             border: none;
         }
 
@@ -68,13 +68,15 @@
         .nav {
             height: 50px;
             width: 100%;
-            background-color: steelblue;
+            /* background: linear-gradient(#424242,#ada9a9 ); */
             position: relative;
             z-index: 1;
+            
         }
 
         .nav > .nav-header {
             display: inline;
+
         }
 
         .nav > .nav-header > .nav-title {
@@ -98,11 +100,13 @@
             display: inline-block;
             padding: 13px 10px 13px 10px;
             text-decoration: none;
-            color: #fff;
+            color: #000000;
         }
 
         .nav > .nav-links > a:hover {
-            background-color: lightsteelblue;
+            background-color:rgba(45, 46, 46, 0.721);
+            border-radius: 20%;
+            color: white;
         }
 
         .nav > #nav-check {
@@ -111,12 +115,12 @@
 
         .nav-title > a {
             text-decoration:none;
-            color: white;
+            color: rgb(0, 0, 0);
         }
 
         .nav-title > a:active, .nav-title > a:hover, .nav-title > a:focus {
             text-decoration:none;
-            color: white;
+            color: blue;
         }
 
 
@@ -171,7 +175,7 @@
             padding: 10px;
             margin: 10px;
             color: black;
-            font-family: serif;
+            font-family: 'Copperplate Gothic';
         }
 
         input {
@@ -530,7 +534,7 @@
 <div class="nav">
     <div class="nav-header">
         <div class="nav-title">
-            <a href="{% url 'register' %}">Hostel Management</a>
+            <a href="{% url 'register' %}">Hostel  Management  System</a>
         </div>
     </div>
     <div class="nav-btn">
