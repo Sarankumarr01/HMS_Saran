@@ -1,7 +1,6 @@
 from django.contrib import admin
-from django.urls import path, include
-from django.conf.urls.static import static
-from hms import settings
+from django.urls import path
+from selection import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +24,3 @@ urlpatterns = [
     path('BH5_Floor5/', views.BH5_Floor5, name='BH5_Floor5'),
     path('BH5_Floor6/', views.BH5_Floor6, name='BH5_Floor6'),
 ]
-
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
