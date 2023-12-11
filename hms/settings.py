@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_)q%hqdkn%*3*2$%#h87g3p)-kt-0oiw+wt5bxi6dr4gb&ge)h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
-ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'selection.User'
 
@@ -77,11 +77,14 @@ WSGI_APPLICATION = 'hms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '5DG-e6f5dACFDCCFDGDdA3AEfBG43F4-',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '16948',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -120,3 +123,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
