@@ -4,8 +4,8 @@
 <div class="wrap">
     <form action="" method="post">
         {% csrf_token %}
-      <div class="fields"> Username <br><br> {{ form.username }}</div>
-      <div class="fields"> Password <br><br> {{ form.password }}</div>
+      <div class="fields"> Username <br><br> <i class="fa fa-user"></i>{{ form.username }}</div>
+      <div class="fields"> Password <br><br> <i class="fa fa-lock" aria-hidden="true"></i>{{ form.password }}</div>
       <input class="button-custom" type="submit" value="LOGIN">
     </form>
   </div>
@@ -13,6 +13,6 @@
 
 
 {% block more_links %}
-    <a href="{% url 'login' %}">Login</a>
-    <a href="{% url 'reg_form' %}">Register</a>
+    <a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Login</a>
+    <a href="{% url 'reg_form' %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Register</a>
 {% endblock more_links %}

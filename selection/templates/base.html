@@ -1,7 +1,7 @@
 <html>
 
 <head>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <style type="text/css">
 
@@ -122,7 +122,7 @@
             font-weight: bold;
             color:#ffffff;
             word-spacing: 1px;
-
+            font-family: "Copperplate Gothic";
         }
 
         .nav-title > a:active, .nav-title > a:hover, .nav-title > a:focus {
@@ -193,12 +193,15 @@
             color: #ffffff;
             font-family: "Fira Sans", sans-serif;
         }
+        .fields>i{
+            margin-right: -10px;
+        }
 
         input {
             border: none;
             border-bottom: 3px solid black;
             text-align: center;
-            font-family: serif;
+            font-family: "Fira Sans", sans-serif;
             font-size: 1em;
             background-color: rgba(0,0,0,0);
             color: white;
@@ -551,7 +554,7 @@
 <div class="nav">
     <div class="nav-header">
         <div class="nav-title">
-            <a href="{% url 'register' %}" style="font-family: Copperplate Gothic;">Hostel  Management  System</a>
+            <a href="{% url 'register' %}">Hostel  Management  System</a>
         </div>
     </div>
     <div class="nav-btn">
@@ -563,7 +566,7 @@
     </div>
     <input type="checkbox" id="nav-check">
     <div class="nav-links">
-        <a href="{% url 'BH5_Floor4' %}">Status</a>
+        <a href="{% url 'BH5_Floor4' %}"><i class="fa fa-bar-chart"></i> Status</a>
 
         {% block more_links %}
         {% endblock more_links %}
