@@ -4,7 +4,7 @@
 <div class="wrap">
     <form action="" method="post">
         {% csrf_token %}
-      <div class="fields"> Username <br><br>{{ form.username }}</div>
+      <div class="fields"> Username <br><br> <i class="fa fa-user" aria-hidden="true"></i>{{ form.username }}</div>
       <div class="fields"> Password <br><br> <i class="fa fa-lock" aria-hidden="true"></i>{{ form.password }}</div>
       <input class="button-custom" type="submit" value="LOGIN">
     </form>
